@@ -1,0 +1,195 @@
+:root { --bg:#0f172a; --panel:#1e293b; --text:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; }
+
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--text); line-height: 1.55; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.contact {
+  margin: 8px 0 0;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.contact a { color: var(--accent); }
+.sep { opacity: .6; }
+
+.switch-btn {
+  align-self: start;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: .92rem;
+  color: var(--accent);
+  background: rgba(255,255,255,.04);
+  transition: transform .04s ease, background .15s ease;
+}
+.switch-btn:hover { background: rgba(255,255,255,.07); }
+.switch-btn:active { transform: translateY(1px); }
+
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; }
+  .switch-btn { justify-self: end; }
+}
+
+
+.container { max-width: 980px; margin: 0 auto; padding: 24px; }
+.hero h1 { margin: 0 0 6px; color: var(--accent); font-size: 32px; }
+.hero p { margin: 0 0 18px; color: var(--muted); }
+
+.panel { background: var(--panel); border-radius: 12px; padding: 18px; margin: 18px 0; }
+.panel h2 { margin: 0 0 12px; color: var(--accent); }
+.panel h3 { margin: 12px 0 6px; color: var(--text); font-weight: 600; }
+.panel p { line-height: 1.6; }
+.card p, .job li { line-height: 1.5; }
+
+.skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+@media (min-width: 900px) { .skills-grid { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+
+ul { margin: 0; padding-left: 18px; }
+ul li { margin: 6px 0; }
+
+.cards { display: grid; gap: 14px; }
+.card, .job { background: rgba(255,255,255,0.03); padding: 14px; border-radius: 10px; }
+.card h3, .job h4 { margin: 0 0 6px; }
+.card p { margin: 6px 0; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  gap: 6px;
+  margin: 24px 0 12px;
+  color: var(--muted);
+  text-align: center; /* Center text inside spans/links */
+}
+
+.footer-top {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center row content */
+}
+
+.footer-bottom {
+  font-size: 0.9em;
+  color: var(--muted);
+}
+
+.footer .muted { color: var(--muted); opacity: 0.7; }
+
+
+@media print {
+  :root { --bg:#fff; --panel:#fff; --text:#000; --muted:#333; --accent:#000; }
+  body { background:#fff; color:#000; }
+  .panel { background:#fff; border-radius:0; padding:0; margin:0 0 16px; }
+  .hero p#tagline, #toggleDoc { display:none !important; }
+  a { color:#000; text-decoration: none; }
+}
+
+/* Smooth mode swap */
+#cvContent {
+  transition: opacity .28s ease, transform .28s ease;
+  will-change: opacity, transform;
+}
+#cvContent.is-fading {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* Be kind to folks who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #cvContent { transition: none; }
+}
+
+@media print {
+  .switch-btn { display: none !important; } /* hides Switch + Download PDF buttons */
+}
+
+/* Tagline row with PDF button aligned to the text */
+.tagline-row {
+  display: flex;
+  align-items: baseline;      /* align to the text baseline */
+  gap: 12px;
+  margin: 2px 0 12px;         /* subtle spacing under the row */
+}
+
+.tagline-row #tagline {
+  margin: 0;                  /* kill default <p> margin */
+  line-height: 1.25;          /* keeps the line tidy */
+}
+
+.tagline-row .switch-btn {
+  margin-left: auto;          /* push PDF button to the right */
+  align-self: baseline;       /* align button with text baseline */
+  line-height: 1;             /* keeps button height tight */
+  padding: 6px 10px;          /* matches your other button padding */
+}
+
+/* Stack nicely on small screens */
+@media (max-width: 720px) {
+  .tagline-row { flex-wrap: wrap; }
+  .tagline-row .switch-btn { margin-left: 0; }
+}
+
+/* Right-side stacked buttons: flush-right + spacing */
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;   /* right edge */
+  gap: 12px;               /* a little space between buttons */
+}
+
+/* Override the global .switch-btn { align-self: start } inside hero-actions */
+.hero-actions .switch-btn {
+  align-self: flex-end;    /* keep both buttons right-aligned */
+}
+
+/* Mobile: put them on one row, still right-ish */
+@media (max-width: 720px) {
+  .hero-actions {
+    flex-direction: row;
+    justify-self: end;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-actions .switch-btn { align-self: auto; }
+}
+
+.switch-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+a:focus-visible { outline: 2px dashed var(--accent); outline-offset: 2px; }
+
+@media print { .hero-actions { display: none !important; } }
+
+/* Mobile: center the two header buttons */
+@media (max-width: 720px) {
+  .hero-actions {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;   /* center horizontally */
+    align-items: center;
+    gap: 12px;
+    justify-self: center;      /* center the flex container in the grid cell */
+  }
+  .hero-actions .switch-btn {
+    align-self: auto;          /* undo global align-self so they center nicely */
+  }
+}
+
+
+

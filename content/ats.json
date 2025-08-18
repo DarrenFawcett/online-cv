@@ -1,0 +1,69 @@
+{
+  "summary": "AWS/Python developer with a strong focus on serverless systems, CI/CD, and automation. Transitioning into tech after 20 years in the motor trade, bringing proven problem-solving, process optimization, and project delivery skills. Proficient in Python and experienced with AWS services including Lambda, DynamoDB, S3, and API Gateway. Skilled in building and deploying real-world projects, leveraging both hands-on development and AI-assisted workflows to deliver efficient, scalable solutions.",
+
+  "personalDescription":
+    "Open-minded problem solver with a strong focus on structure, organization, and process efficiency. Experienced in creating test projects to explore and integrate new technologies, with a proven hands-on learning approach. Skilled at simplifying complex ideas and communicating them clearly to different audiences. Passionate about making technology accessible through practical examples and relatable explanations.",
+
+  "goals": [
+    "Obtain AWS Solutions Architect Associate certification",
+    "Build production-ready serverless applications",
+    "Secure a cloud/backend developer role"
+  ],
+
+  "tagline": "Note: This is the condensed, ATS-friendly version of my CV. For the full CV with detailed project descriptions, use the link at the bottom to switch to  CV view.",
+  "languagesNote": "Actively expanding my coding knowledge. Proficient in Python; working knowledge of Bash, HTML/CSS, JavaScript, JSON, and PowerShell. I can read and modify code across languages to adapt, integrate, and debug; my focus is on system design, integration, and leveraging AI for speed.",
+   
+  "skills": {
+    "languages": ["Python", "Bash", "JavaScript", "JSON", "HTML/CSS"],
+    "aws": ["Lambda", "DynamoDB", "S3", "EC2", "API Gateway", "IAM", "CloudFormation", "CloudFront", "Serverless Architecture"],
+    "tools": ["Docker", "Git", "GitHub Actions", "CI/CD", "REST APIs", "Pandas", "NumPy", "Pytest", "Unit testing"],
+    "soft": ["Troubleshooting under pressure", "Process optimization", "Clear documentation"]
+  },
+
+  "projects": [
+    {
+      "name": "GPT Assistant",
+      "blurb": "AI-powered assistant that integrates OpenAI's GPT with a serverless AWS backend. Features include natural language chat, calendar event extraction, and image uploads to S3 — all wrapped in a modern, mobile-friendly React UI.",
+      "stack": ["React", "Tailwind", "Vite", "AWS Lambda", "API Gateway", "S3", "OpenAI", "Python"],
+      "link": "https://github.com/AWS-DF-Projects/gpt-assistant-calendar",  
+      "impact": "Provides a foundation for building lightweight AI agents and productivity tools. Demonstrates end-to-end integration of GPT with AWS services using a clean UI and scalable infrastructure."
+    },
+    {
+      "name": "Finance Tracker",
+      "blurb": "Parses PDF bank statements and automatically groups recurring payments such as rent or wages, integrating with AWS Lambda for serverless automation.",
+      "stack": ["Python", "pandas", "Regex", "pdfplumber", "AWS Lambda (in progress)"],
+      "link": "https://github.com/AWS-DF-Projects/Finance-Tracker-App",
+      "impact": "Reduced monthly reconciliation time from hours to minutes; identifies DD/SO patterns automatically."
+    },
+    {
+      "name": "Personal Tracker App (evolving into Mind Mirror)",
+      "blurb": "Early-stage wellness and productivity tracker built with a serverless AWS backend. Users can log daily goals, scores, and personal notes through a web interface. Currently transitioning into 'Mind Mirror' — a deeper system for mood tracking, reflection, and guided self-awareness.",
+      "stack": ["AWS Lambda", "API Gateway", "DynamoDB", "S3", "HTML", "JavaScript"],
+      "link": "https://github.com/AWS-DF-Projects/Personal-Tracker-App",
+      "impact": "Automates weekly summaries and progress tracking; future versions aim to integrate GPT-powered reflections and personalized feedback."
+    },
+    {
+    "name": "Job Scraper (Docker) — evolving into Email Job Search Agent",
+    "blurb": "Initial version is a Dockerized Python scraper that collects AWS/Python job listings from public websites. Now evolving into a smarter agent that parses email alerts (e.g., LinkedIn job search emails) to extract relevant roles and log opportunities automatically.",
+    "stack": ["Python", "BeautifulSoup", "Docker", "EC2", "Cron", "IMAP"],
+    "link": "https://github.com/AWS-DF-Projects/Docker-Website-Job-Scraper",
+    "impact": "Reduces manual job hunting effort by automating both scraping and email parsing, with future plans for GPT-based role summarization and prioritization."
+    }
+  ],
+
+  "work": [
+    {
+      "company": "BMW Vertu (Mini), York",
+      "role": "Technician",
+      "period": "2022–Present",
+      "bullets": [
+        "Improved first-time fix rate by 18% through diagnostics process standardisation.",
+        "Automated internal logging, saving ~5 hours per week."
+      ]
+    }
+  ],
+  "contact": {
+    "email": "darrenfawcett1980@gmail.com",
+    "phone": "On Request"
+  }
+}

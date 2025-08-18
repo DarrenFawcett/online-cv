@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Darren Fawcett — CV</title>
+  <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+  <main role="main" class="container">
+    <header class="hero" role="banner">
+      <div class="hero-left">
+        <h1>Darren Fawcett</h1>
+        <p><strong>Cloud & Python — AWS, serverless, automation</strong></p>
+
+        <p class="contact">
+          <a href="mailto:darrenfawcett1980@gmail.com">darrenfawcett1980@gmail.com</a>
+          <span class="sep">•</span>
+          Phone: On Request
+          <span class="sep">•</span>
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
+          <span class="sep">•</span>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+
+        <p id="tagline" class="muted"></p>
+      </div>
+
+      <!-- New right-side column with stacked buttons -->
+      <div class="hero-actions">
+        <a id="toggleDoc" class="switch-btn" href="#">Switch to Full CV view</a>
+        <a id="downloadPdf" class="switch-btn" href="#" aria-label="Download as PDF">Download PDF</a>
+      </div>
+    </header>
+
+    <div id="cvContent">
+      <section class="panel" aria-labelledby="summary-h2">
+        <h2 id="summary-h2">Summary</h2>
+        <p id="summary"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Personal Description</h2>
+        <p id="personalDescription"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Goals</h2>
+        <ul id="skills-goals"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Technical Skills</h2>
+        <p id="languagesNote" class="muted"></p>
+        <div class="skills-grid">
+          <div>
+            <h3>Languages & Code</h3>
+            <ul id="skills-languages"></ul>
+          </div>
+          <div>
+            <h3>AWS</h3>
+            <ul id="skills-aws"></ul>
+          </div>
+          <div>
+            <h3>Tools & Tech</h3>
+            <ul id="skills-tools"></ul>
+          </div>
+          <div>
+            <h3>Soft Skills</h3>
+            <ul id="skills-soft"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Projects</h2>
+        <div id="projects" class="cards"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Work History</h2>
+        <div id="work" class="cards"></div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p class="muted" style="text-align:center;margin:6px 0 0;">
+        Work in progress — I’m wiring up more write-ups and links. Latest code on
+        <a href="https://github.com/AWS-DF-Projects" target="_blank" rel="noopener">GitHub</a>,
+        connect on <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+
+      <div class="footer-top">
+        <span id="contact"></span>
+        <span class="muted">•</span>
+        <a id="toggleDocFooter" href="#">Switch</a>
+      </div>
+      <div class="footer-bottom">
+        <span id="footerBuilt"></span>
+      </div>
+    </footer>
+
+
+  <script src="scripts/loader.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Darren Fawcett",
+    "email": "mailto:darrenfawcett1980@gmail.com",
+    "description": "AWS/Python developer focusing on serverless systems, CI/CD, and automation.",
+    "knowsAbout": ["AWS Lambda","DynamoDB","API Gateway","S3","Serverless Architecture","Python","Docker","GitHub Actions","REST APIs"],
+    "hasOccupation": {"@type":"Occupation","name":"Cloud/Backend Developer"},
+    "url": "https://<your-domain>/",
+    "worksFor": {"@type":"Organization","name":"BMW Vertu (Mini), York"},
+    "sameAs": ["https://github.com/AWS-DF-Projects"]
+  }
+</script>
+
+</body>
+</html>
