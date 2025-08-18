@@ -60,6 +60,13 @@
       "impact": "Reduces inbox clutter and improves productivity by automatically organizing incoming emails."
     },
     {
+      "name": "Online CV Website (ATS-Friendly)",
+      "blurb": "Built a modular, JSON-driven online CV hosted on AWS S3 and delivered via CloudFront, designed for both human readability and ATS compatibility.",
+      "stack": ["HTML", "CSS", "JavaScript", "S3", "CloudFront", "JSON"],
+      "link": "https://github.com/AWS-DF-Projects/online-cv",
+      "impact": "Provides a clean, mobile-friendly, and ATS-optimized personal website that can be easily updated by editing JSON — no code or redeploys needed."
+    },
+    {
       "name": "NAT-less EC2 Update Design",
       "blurb": "Built a NAT-less, immutable EC2 architecture using AMI-based deployments and autoscaling to save on AWS costs.",
       "stack": ["EC2", "AMI", "Auto Scaling", "ALB (planned)"],
