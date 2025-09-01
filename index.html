@@ -1,121 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Darren Fawcett — CV</title>
-  <link rel="stylesheet" href="styles/main.css"/>
-</head>
-<body>
-  <main role="main" class="container">
-    <header class="hero" role="banner">
-      <div class="hero-left">
-        <h1>Darren Fawcett</h1>
-        <p><strong>Cloud & Python — AWS, serverless, automation</strong></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Darren Fawcett Online CV</title>
+    <link rel="icon" type="image/png" href="images/cv-icon.png" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main class="sheet float" role="main" id="cvContent">
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="toolbar-title">Online CV</div>
 
-        <p class="contact">
-          <a href="mailto:darrenfawcett1980@gmail.com">darrenfawcett1980@gmail.com</a>
-          <span class="sep">•</span>
-          Phone: On Request
-          <span class="sep">•</span>
-          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
-          <span class="sep">•</span>
-          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
-        </p>
+        <!-- moved + restyled -->
+        <span class="toolbar-note" id="tagline"></span>
 
-        <p id="tagline" class="muted"></p>
-      </div>
-
-      <!-- New right-side column with stacked buttons -->
-      <div class="hero-actions">
-        <a id="toggleDoc" class="switch-btn" href="#">Switch to Full CV view</a>
-        <a id="downloadPdf" class="switch-btn" href="#" aria-label="Download as PDF">Download PDF</a>
-      </div>
-    </header>
-
-    <div id="cvContent">
-      <section class="panel" aria-labelledby="summary-h2">
-        <h2 id="summary-h2">Summary</h2>
-        <p id="summary"></p>
-      </section>
-
-      <section class="panel">
-        <h2>Personal Description</h2>
-        <p id="personalDescription"></p>
-      </section>
-
-      <section class="panel">
-        <h2>Goals</h2>
-        <ul id="skills-goals"></ul>
-      </section>
-
-      <section class="panel">
-        <h2>Technical Skills</h2>
-        <p id="languagesNote" class="muted"></p>
-        <div class="skills-grid">
-          <div>
-            <h3>Languages & Code</h3>
-            <ul id="skills-languages"></ul>
-          </div>
-          <div>
-            <h3>AWS</h3>
-            <ul id="skills-aws"></ul>
-          </div>
-          <div>
-            <h3>Tools & Tech</h3>
-            <ul id="skills-tools"></ul>
-          </div>
-          <div>
-            <h3>Soft Skills</h3>
-            <ul id="skills-soft"></ul>
-          </div>
+        <div class="toolbar-actions">
+          <a href="#" id="toggleDoc" class="btn btn-ghost"
+            >Switch to ATS view</a
+          >
+          <a href="CV-PDF/DarrenFawcettCV-Fit.pdf" class="btn btn-ghost" download
+            >Download PDF</a
+          >
         </div>
-      </section>
+      </div>
 
-      <section class="panel">
-        <h2>Projects</h2>
-        <div id="projects" class="cards"></div>
-      </section>
+      <div class="grid">
+        <!-- LEFT MENU / RAIL -->
+        <aside class="rail">
+          <img
+            src="images/main_icon_wht.png"
+            alt="DF logo"
+            class="avatar-square"
+          />
 
-      <section class="panel">
-        <h2>Work History</h2>
-        <div id="work" class="cards"></div>
-      </section>
-    </div>
+          <h1 id="name">Darren Fawcett</h1>
+          <p class="tag" id="tagline"></p>
+          <div class="contact-block">
+            <p id="email">
+              <a
+                href="mailto:darrenfawcett1980@gmail.com"
+                class="contact-link"
+                onclick="navigator.clipboard?.writeText('darrenfawcett1980@gmail.com')"
+              >
+                darrenfawcett1980@gmail.com
+              </a>
+            </p>
+            <p id="phone">Phone: On Request</p>
+            <p>
+              <a href="https://github.com/DarrenFawcett" target="_blank"
+                >GitHub</a
+              >
+              •
+              <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
 
-    <footer class="footer">
-      <p class="muted" style="text-align:center;margin:6px 0 0;">
-        Work in progress — I’m wiring up more write-ups and links. Latest code on
-        <a href="https://github.com/AWS-DF-Projects" target="_blank" rel="noopener">GitHub</a>,
-        connect on <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>.
+          <hr class="hr" />
+
+          <div class="row">
+            <h2>Personal</h2>
+            <p id="personalDescription"></p>
+          </div>
+
+          <div class="row">
+            <h2>Technical Skills</h2>
+            <p id="languagesNote"></p>
+          </div>
+
+          <hr class="hr" />
+
+          <div class="row">
+            <div class="skillgrid">
+              <div>
+                <h3>Languages &amp; Code</h3>
+                <ul id="skills-languages"></ul>
+              </div>
+
+              <div>
+                <h3>Tools &amp; Tech</h3>
+                <ul id="skills-tools"></ul>
+              </div>
+              <div>
+                <h3>AWS</h3>
+                <ul id="skills-aws"></ul>
+              </div>
+              <div>
+                <h3>Soft Skills</h3>
+                <ul id="skills-soft"></ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT CONTENT (SMOKE WHITE) -->
+        <section class="content">
+          <div class="section">
+            <h2>Summary</h2>
+            <p id="summary"></p>
+          </div>
+
+          <div class="section">
+            <h2>Goals</h2>
+            <ul id="skills-goals"></ul>
+          </div>
+
+          <div class="section">
+            <h2>Projects</h2>
+            <div id="projects" class="cards"></div>
+          </div>
+
+          <div class="section">
+            <h2>Work History</h2>
+            <div id="work" class="cards"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER sits OUTSIDE the menu sheet -->
+    <footer class="footer-legacy" role="contentinfo">
+      <p class="muted">
+        Work in progress — I’m wiring up more write-ups and links. Latest code
+        on
+        <a
+          href="https://github.com/DarrenFawcett"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >, connect on
+        <a
+          href="https://linkedin.com/in/YOUR_LINKEDIN"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >.
       </p>
 
-      <div class="footer-top">
+      <p class="muted">
         <span id="contact"></span>
-        <span class="muted">•</span>
-        <a id="toggleDocFooter" href="#">Switch</a>
-      </div>
-      <div class="footer-bottom">
-        <span id="footerBuilt"></span>
-      </div>
+        <span class="sep">•</span>
+        <a id="toggleDocFooter" href="?mode=cv">Switch to Full CV view</a>
+      </p>
+
+      <p class="copyright" id="footerBuilt">
+        © 2025 Darren Fawcett — Hosted on AWS S3 + CloudFront.
+      </p>
     </footer>
-
-
+  </body>
   <script src="scripts/loader.js"></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Darren Fawcett",
-    "email": "mailto:darrenfawcett1980@gmail.com",
-    "description": "AWS/Python developer focusing on serverless systems, CI/CD, and automation.",
-    "knowsAbout": ["AWS Lambda","DynamoDB","API Gateway","S3","Serverless Architecture","Python","Docker","GitHub Actions","REST APIs"],
-    "hasOccupation": {"@type":"Occupation","name":"Cloud/Backend Developer"},
-    "url": "https://<your-domain>/",
-    "worksFor": {"@type":"Organization","name":"BMW Vertu (Mini), York"},
-    "sameAs": ["https://github.com/AWS-DF-Projects"]
-  }
-</script>
-
-</body>
 </html>

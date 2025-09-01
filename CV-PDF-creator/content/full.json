@@ -1,13 +1,7 @@
 {
   "summary": "With 20 years of experience in the motor trade, currently employed at BMW Vertu York, I’m seeking a career change into tech. Since 2020, I’ve been learning and trading in the forex market and discovered a passion for coding along the way. I began with JavaScript, HTML, and CSS before transitioning to Python and AWS, where I’ve developed multiple small test projects to explore new services and understand how they integrate. I’m eager to enter the tech industry, continue expanding my skills, and apply my hands-on learning approach to real-world projects.",
 
- "personalDescription": [
-    "Thrives on finding innovative approaches and refining processes for greater efficiency.",
-    "Strong inclination toward structure and organization, excelling in both small group settings and larger teams when confident in the subject matter.",
-    "Enjoys creating small test projects to explore new technologies and see how services fit together, believing hands-on experimentation is the best way to learn.",
-    "Passionate about teaching and making complex ideas accessible through clear explanations and relatable metaphors to support different learning styles."
-  ],
-
+  "personalDescription": "I’m an open-minded problem solver who thrives on finding innovative approaches and refining processes for greater efficiency. With a strong inclination toward structure and organization, I excel in small group settings but also contribute effectively to larger teams when confident in the subject matter. I enjoy creating small test projects to explore new technologies and see how services fit together, as I believe hands-on experimentation is the best way to learn. My passion for teaching drives me to make complex ideas accessible, using clear explanations and relatable metaphors to support different learning styles.",
 
   "goals": [
     "Deepen my coding knowledge and broaden proficiency across multiple languages through real-world projects.",
@@ -24,8 +18,8 @@
 
   "skills": {
     "languages": ["Python", "Bash", "HTML/CSS", "JavaScript", "JSON", "PowerShell"],
+    "aws": ["Lambda", "DynamoDB", "EC2, S3, CDN, IAM", "API Gateway", "CloudFormation", "Serverless Architecture", "With many more."],
     "tools": ["Docker", "Git", "GitHub Actions", "CI/CD", "REST APIs", "Pandas", "Unit testing"],
-    "aws": ["Lambda", "DynamoDB", "S3", "EC2", "API Gateway", "IAM", "CloudFormation", "Serverless Architecture", "CDN", "With many more."],
     "soft": ["Creative problem-solving", "Clear technical communication", "Focus", "Simplifying complexity"]
   },
 
@@ -34,64 +28,23 @@
       "name": "GPT Assistant",
       "blurb": "AI-powered assistant combining OpenAI's GPT with a serverless AWS backend. Includes calendar event detection and image uploads to S3 via a clean React UI.",
       "stack": ["React", "Tailwind", "Vite", "AWS Lambda", "API Gateway", "S3", "OpenAI", "Python"],
-      "link": "https://github.com/DarrenFawcett/gpt-assistant-calendar",
       "impact": "Demonstrates end-to-end GPT integration and serves as a foundation for lightweight AI agents."
     },
     {
       "name": "Finance Tracker",
       "blurb": "Parses PDF bank statements and detects recurring patterns like wages or rent using Python and pandas.",
       "stack": ["Python", "pandas", "Regex", "PDF Parsing"],
-      "link": "https://github.com/DarrenFawcett/Finance-Tracker-App",
       "impact": "Cut financial reconciliation time from hours to minutes via automated categorization."
-    },
-    {
-      "name": "Personal Tracker App (evolving into Mind Mirror)",
-      "blurb": "Wellness tracker logging daily goals, scores, and progress via a serverless AWS backend. Now evolving into 'Mind Mirror' — a self-reflection and mood analysis tool powered by GPT.",
-      "stack": ["AWS Lambda", "API Gateway", "DynamoDB", "S3", "HTML/JS"],
-      "link": "https://github.com/DarrenFawcett/Personal-Tracker-App",
-      "impact": "Automates weekly summaries and self-tracking; reducing manual effort and improving insight."
-    },
-    {
-      "name": "Job Scraper (Docker) — evolving into Email Job Search Agent",
-      "blurb": "Initial version scrapes AWS/Python job listings. Now transitioning into a smarter agent that parses LinkedIn email alerts to track and prioritize job opportunities.",
-      "stack": ["Python", "BeautifulSoup", "Docker", "EC2", "Cron", "IMAP"],
-      "link": "https://github.com/DarrenFawcett/Docker-Website-Job-Scraper",
-      "impact": "Reduces manual job hunting with automated scraping and email parsing logic."
-    },
-   {
-      "name": "EC2 Email Sorter Agent",
-      "blurb": "Dockerized Python agent that connects to an email inbox via IMAP, scans unread messages, filters out junk, and auto-sorts valid emails into folders based on sender or subject.",
-      "stack": ["Python", "Docker", "EC2", "IMAP"],
-      "link": "https://github.com/DarrenFawcett/EC2-Email-Inbox-Job-Scraper",
-      "impact": "Reduces inbox clutter and improves productivity by automatically organizing incoming emails."
     },
     {
       "name": "Online CV Website (ATS-Friendly)",
       "blurb": "Built a modular, JSON-driven online CV hosted on AWS S3 and delivered via CloudFront, designed for both human readability and ATS compatibility.",
       "stack": ["HTML", "CSS", "JavaScript", "S3", "CloudFront", "JSON"],
-      "link": "https://github.com/DarrenFawcett/online-cv",
       "impact": "Provides a clean, mobile-friendly, and ATS-optimized personal website that can be easily updated by editing JSON — no code or redeploys needed."
     },
     {
-      "name": "NAT-less EC2 Update Design",
-      "blurb": "Built a NAT-less, immutable EC2 architecture using AMI-based deployments and autoscaling to save on AWS costs.",
-      "stack": ["EC2", "AMI", "Auto Scaling", "ALB (planned)"],
-      "link": "https://github.com/DarrenFawcett/AWS-small-Tests/blob/main/NAT-less-tests",
-      "impact": "Eliminates NAT Gateway costs by leveraging pre-baked AMIs and secure design."
-    },
-    {
-      "name": "Earthworm Lab App",
-      "blurb": "Lightweight test project using Lambda and API Gateway to explore request/response flows.",
-      "stack": ["HTML", "JS", "AWS API", "Lambda"],
-      "link": "https://github.com/DarrenFawcett/AWS-small-Tests/tree/main/website-api-lambda",
-      "impact": "Served as a playground to experiment with serverless request handling."
-    },
-    {
-      "name": "Lambda Testing",
-      "blurb": "Minimal AWS Lambda + DynamoDB project for CRUD operations and API Gateway integration.",
-      "stack": ["AWS Lambda", "DynamoDB"],
-      "link": "https://github.com/DarrenFawcett/AWS-small-Tests/tree/main/Lambda-API-Lambda",
-      "impact": "Tested and validated backend serverless patterns for learning and reuse."
+      "name": "Many more on the Online CV",
+      "blurb": "https://online-cv.darrenfawcett.com/"
     }
   ],
 
@@ -129,11 +82,7 @@
     {
       "company": "Kwik Fit",
       "role": "Fitter / Assistant Manager",
-      "period": "2004–2008",
-      "bullets": [
-        "Performed tyre and exhaust fitting, diagnostics, and daily workshop operations.",
-        "Maintained high levels of customer satisfaction through efficient service delivery."
-      ]
+      "period": "2004–2008  Performed tyre and exhaust fitting, diagnostics, and daily workshop operations."
     }
   ],
 

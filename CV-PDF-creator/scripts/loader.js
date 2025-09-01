@@ -1,6 +1,6 @@
 (async () => {
   const qs = new URLSearchParams(location.search);
-  let mode = qs.get("mode") === "cv" ? "cv" : "ats";
+  let mode = qs.get("mode") === "cv" ? "cv" : "full";
 
   // Hard-coded taglines
   const TAGLINES = {
@@ -38,27 +38,9 @@
   // Render the whole page from JSON
   function render(currentMode, data) {
     setToggleLinks(currentMode);
-
-    // Prefer JSON-provided tagline; fallback to hard-coded by mode
-    setText("tagline", data.tagline || TAGLINES[currentMode] || "");
-
+    setText("tagline", TAGLINES[currentMode] ?? "");
     setText("summary", data.summary || "");
-
-    // Personal: accept string OR array (bulleted)
-    const personalEl = document.getElementById("personalDescription");
-    if (personalEl) {
-      const pd = data.personalDescription;
-      if (Array.isArray(pd)) {
-        personalEl.innerHTML = `<ul>${pd.map(item => `<li>${item}</li>`).join("")}</ul>`;
-        personalEl.style.display = ""; // ensure visible
-      } else if (typeof pd === "string" && pd.trim()) {
-        personalEl.textContent = pd;
-        personalEl.style.display = "";
-      } else {
-        personalEl.style.display = "none";
-      }
-    }
-
+    setText("personalDescription", data.personalDescription || "");
     setText("languagesNote", data.languagesNote || "");
 
     const sk = data.skills || {};
@@ -99,7 +81,6 @@
       contact.innerHTML = `${email}${phone}`;
     }
   }
-
 
   // Initial load
   try {

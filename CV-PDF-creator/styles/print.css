@@ -1,0 +1,8 @@
+@media print {
+  .print-spacer {
+    display: block;
+    break-before: page;
+    page-break-before: always;
+    height: 0; /* No visual height, but still forces the break */
+  }
+}
